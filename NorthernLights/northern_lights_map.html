@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(75.3880598, -96.9157643);
+
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: myCenter, zoom: 1};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+
+  var goodVis = new google.maps.Circle({
+    center: myCenter,
+    radius: 2400000,
+    strokeColor: "DeepSkyBlue",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "SkyBlue",
+    fillOpacity: 0.4
+  });
+  goodVis.setMap(map);
+
+
+  var okVis = new google.maps.Circle({
+    center: myCenter,
+    radius: 2900000,
+    strokeColor: "green",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "lightgreen",
+    fillOpacity: 0.4
+  });
+  okVis.setMap(map);
+  
+   var someVis = new google.maps.Circle({
+    center: myCenter,
+    radius: 3400000,
+    strokeColor: "Gold",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "Yellow",
+    fillOpacity: 0.4
+  });
+  someVis.setMap(map);
+  
+     var badVis = new google.maps.Circle({
+    center: myCenter,
+    radius: 3900000,
+    strokeColor: "Red",
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: "Pink",
+    fillOpacity: 0.4
+  });
+  badVis.setMap(map);
+}
+
+</script>
+<img width= "100%" src=northernlights.jpg>
+
+<h1>
+About the Northern Lights
+</h1>
+<p>
+The bright dancing lights of the aurora are actually collisions between electrically 
+charged particles from the sun that enter the earth's atmosphere. The lights are seen 
+above the magnetic poles of the northern and southern hemispheres.
+</p>
+
+<h1 style="fontsize:30px">
+Where to see the northern lights
+<h2 style="color:blue">
+Blue= Very Good Chance
+<h2 style="color:green">
+Green= Good Chance
+<h2 style="color:yellow">
+Yellow= Ok Chance<
+<h2 style="color:red">
+Red= Very Little Chance
+<br>
+<h1>
+Sources
+</h1>
+http://www.space.com/32610-amazing-auroras-northern-lights-pictures-2016.html
+<br>
+https://www.google.com/maps
+<br>
+http://www.northernlightscentre.ca/northernlights.html
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<style>
+body{
+background-color:lightgray;
+}
+</style>
+</body>
+</html>
